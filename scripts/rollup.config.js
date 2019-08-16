@@ -13,12 +13,8 @@ const options = {
         'aes-decrypter',
         'm3u8-parser',
         'mpd-parser',
-        'mux.js/lib/mp4',
-        'mux.js/lib/mp4/probe',
-        'mux.js/lib/tools/mp4-inspector',
-        'mux.js/lib/tools/ts-inspector.js',
-        'mux.js/lib/utils/clock',
-        'url-toolkit'
+        'mux.js',
+        '@videojs/vhs-utils'
       ])
     });
   },
@@ -55,7 +51,7 @@ const config = generate(options);
 
 // export the builds to rollup
 export default [
-  config.makeBuild('module', {
+  config.makeBuild('browser', {
     input: 'src/decrypter-worker.js',
     output: {
       format: 'iife',
@@ -65,7 +61,7 @@ export default [
     external: []
   }),
 
-  config.makeBuild('module', {
+  config.makeBuild('browser', {
     input: 'src/transmuxer-worker.js',
     output: {
       format: 'iife',
