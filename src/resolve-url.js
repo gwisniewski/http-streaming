@@ -2,7 +2,7 @@
  * @file resolve-url.js - Handling how URLs are resolved and manipulated
  */
 
-import _resolveUrl from '@videojs/vhs-utils/src/resolve-url';
+import _resolveUrl from '@videojs/vhs-utils/dist/resolve-url.es.js';
 
 export const resolveUrl = _resolveUrl;
 
